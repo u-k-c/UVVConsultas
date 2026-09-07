@@ -30,7 +30,13 @@ Update-Database
 3. Inicie a aplicação:
 
 ```bash
-dotnet run
+dotnet run --project .\UVVConsultas.csproj
+```
+
+Se o terminal estiver na pasta acima de `UVVConsultas`, use:
+
+```bash
+dotnet run --project .\UVVConsultas\UVVConsultas.csproj
 ```
 
 4. Acesse no navegador usando a URL exibida no terminal. Com o perfil padrão, use:
@@ -42,7 +48,7 @@ http://localhost:5234
 Para executar em uma porta específica:
 
 ```bash
-dotnet run --urls http://localhost:5010
+dotnet run --project .\UVVConsultas.csproj --urls http://localhost:5010
 ```
 
 > Em instalações com autenticação Windows, a string padrão utiliza o usuário do Windows que executa a aplicação. Ajuste `Server` em `appsettings.json` caso sua instância tenha outro nome.
