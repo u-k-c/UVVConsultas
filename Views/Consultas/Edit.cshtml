@@ -1,0 +1,59 @@
+@model UVVConsultas.ViewModels.ConsultaViewModel
+@{
+    ViewData["Title"] = "Editar Consulta";
+}
+
+<div class="row justify-content-center">
+    <div class="col-md-7">
+        <h2 class="mb-4">Editar Consulta</h2>
+
+        <form asp-action="Edit" method="post">
+            <input type="hidden" asp-for="Id" />
+            <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+            <div class="mb-3">
+                <label asp-for="Especialidade" class="form-label"></label>
+                <select asp-for="Especialidade" asp-items="Model.AreasDisponiveis" class="form-select"></select>
+                <span asp-validation-for="Especialidade" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="TipoAtendimento" class="form-label"></label>
+                <select asp-for="TipoAtendimento" asp-items="Model.TiposDisponiveis" class="form-select"></select>
+                <span asp-validation-for="TipoAtendimento" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Medico" class="form-label"></label>
+                <select asp-for="Medico" asp-items="Model.MedicosDisponiveis" class="form-select"></select>
+                <span asp-validation-for="Medico" class="text-danger"></span>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label asp-for="DataConsulta" class="form-label"></label>
+                    <input asp-for="DataConsulta" type="date" class="form-control" />
+                    <span asp-validation-for="DataConsulta" class="text-danger"></span>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label asp-for="HoraConsulta" class="form-label"></label>
+                    <select asp-for="HoraConsulta" asp-items="Model.HorariosDisponiveis" class="form-select"></select>
+                    <span asp-validation-for="HoraConsulta" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Descricao" class="form-label"></label>
+                <textarea asp-for="Descricao" class="form-control" rows="4"></textarea>
+                <span asp-validation-for="Descricao" class="text-danger"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Salvar Alterações</button>
+            <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

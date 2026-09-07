@@ -1,0 +1,19 @@
+## Build output
+bin/
+obj/
+
+## Visual Studio / VS Code local files
+.vs/
+.vscode/*
+!.vscode/extensions.json
+*.user
+*.suo
+
+## User-specific local database files
+*.mdf
+*.ldf
+*.db
+
+## Logs and generated files
+*.log
+TestResults/
