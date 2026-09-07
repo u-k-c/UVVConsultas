@@ -62,6 +62,6 @@ dotnet run --urls http://localhost:5010
 - Proteção de rotas autenticadas com `[Authorize]`
 
 ## Vídeo Demonstrativo
-- Link do vídeo: **INSIRA_AQUI_A_URL_PUBLICA_DO_VIDEO**
+- Link do vídeo: [Demonstração do sistema no YouTube](https://youtu.be/Z3jSboZmoHs)
 
 O vídeo deve demonstrar: cadastro de usuário, login, cadastro de consulta e consulta da listagem protegida.
